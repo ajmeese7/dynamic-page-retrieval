@@ -1,0 +1,15 @@
+{
+  "name": "dynamic-page-retrieval",
+  "version": "1.0.0",
+  "description": "Scrape data from JS-rendered pages",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ajmeese7/dynamic-page-retrieval"
+  },
+  "main": "retrieve.js",
+  "author": "Aaron Meese",
+  "license": "MIT",
+  "dependencies": {
+    "scraperjs": "1.2.0"
+  }
+}
