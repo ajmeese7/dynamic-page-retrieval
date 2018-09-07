@@ -9,7 +9,7 @@ with closing(Firefox()) as browser:
      browser.get(URL)
      # wait for the page to load
      WebDriverWait(browser, timeout=10).until(
-         lambda x: x.find_element_by_id('gallery-list'))
+         lambda x: x.find_element_by_id('gallery-list')) # TODO: Set as parameter
      # store it to string variable
      page_source = browser.page_source
 print(page_source.encode("utf-8"))
