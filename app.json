@@ -1,8 +1,6 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
-  "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
+  "name": "dynamic-page-retrieval",
+  "description": "Scrape data from JS-rendered pages",
+  "repository": "https://github.com/ajmeese7/dynamic-page-retrieval",
+  "keywords": ["node", "heroku", "express", "puppeteer"]
 }
