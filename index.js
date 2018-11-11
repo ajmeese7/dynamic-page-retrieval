@@ -28,7 +28,7 @@ app
           // IDEA: Use express to respond to requests?
           var obj = { html : html };
           //res.writeHead(200, {"Content-Type": "application/json"}); // Success code
-          res.send(JSON.stringify(obj));
+          res.send(/*JSON.stringify(obj)*/ "HELLO WORLD!");
           //res.end();
         })
         .catch(function(err) {
