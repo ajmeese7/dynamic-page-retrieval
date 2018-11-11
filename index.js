@@ -15,7 +15,7 @@ app
       var parameter_URL = req.query.URL; // 'URL' is the parameter in the page location (after '?URL=')
 
       puppeteer
-        .launch({args: ['--no-sandbox', '--disable-setuid-sandbox']}) // TODO: Check the security reprecussions of doing this
+        .launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
         .then(function(browser) {
           return browser.newPage();
         })
