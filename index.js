@@ -10,6 +10,12 @@ app
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
+  .use((req, res, next) => { // CORS headers?
+      res.append('Access-Control-Allow-Origin', ['*']);
+      res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+      res.append('Access-Control-Allow-Headers', 'Content-Type');
+      next();
+  })
   .get('/scrape', function (req, res) { // Stands for `request` and `response`
       // ex. dynamic-page-retrieval.herokuapp.com/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html
       var parameter_URL = req.query.URL; // 'URL' is the parameter in the page location (after '?URL=')
