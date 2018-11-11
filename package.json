@@ -7,12 +7,14 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "puppeteer": "1.10.0"
+    "puppeteer": "1.10.0",
+    "xmlhttprequest": "1.8.0"
   },
   "repository": {
     "type": "git",

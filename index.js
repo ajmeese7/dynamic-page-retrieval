@@ -5,17 +5,17 @@ const PORT = process.env.PORT || 5000
 var app = express()
 
 app
-  // NOTE: Use this section if you want to make the site fancy as well as retrieve code
+  // NOTE: Use the below for fancy display methods for the rest of the application
   /*.use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))*/
   .get('/scrape', function (req, res) {
-      var url = require('url');
-      var parameter_URL = req.query.URL; // 'URL' is the parameter in the page location (after the '?')
+      // ex. dynamic-page-retrieval.herokuapp.com/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html
+      var parameter_URL = req.query.URL; // 'URL' is the parameter in the page location (after '?URL=')
 
       puppeteer
-        .launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
+        .launch({args: ['--no-sandbox', '--disable-setuid-sandbox']}) // TODO: Check the security reprecussions of doing this
         .then(function(browser) {
           return browser.newPage();
         })
@@ -25,10 +25,15 @@ app
           });
         })
         .then(function(html) {
-          console.log(html);
+          // IDEA: Use express to respond to requests?
+          var obj = { html : html };
+          res.writeHead(200, {"Content-Type": "application/json"}); // Success code
+          res.write(JSON.stringify(obj));
         })
         .catch(function(err) {
-          console.error(err);
+          var obj = { err : err };
+          res.writeHead(404, {"Content-Type": "application/json"}); // Error code
+          res.write(JSON.stringify(obj));
         });
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`)) // localhost:5000
