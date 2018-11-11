@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Scrape data from JS-rendered pages",
   "engines": {
-    "node": "10.x"
+    "node": "9.3.0"
   },
   "main": "index.js",
   "scripts": {
