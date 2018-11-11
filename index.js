@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer')
 const express = require('express')
 const path = require('path')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000 // Heroku or local
 var app = express()
 
 app
@@ -35,11 +35,13 @@ app
           var obj = { html : html };
           res.writeHead(200, {"Content-Type": "application/json"}); // Success code
           res.write(JSON.stringify(obj));
+          res.end();
         })
         .catch(function(err) {
           var obj = { err : err };
           res.writeHead(404, {"Content-Type": "application/json"}); // Error code
           res.write(JSON.stringify(obj));
+          res.end();
         });
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`)) // localhost:5000
