@@ -54,3 +54,7 @@ And you should have a working copy of the project.
 Feel free to open a PR for README additions of GET requests in other languages, making a pretty
 homepage and displaying the information on the scraped page in a nicer format, better tests,
 better error handling, etc.
+
+### Ideas
+- Make npm package where you just put in the URL and get back the scraped content
+- Make similar projects in other languages (even though that was a bust before)
