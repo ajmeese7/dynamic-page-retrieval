@@ -6,11 +6,11 @@ var app = express()
 
 app
   // NOTE: Use the below for fancy display methods for the rest of the application
-  /*.use(express.static(path.join(__dirname, 'public')))
+  .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))*/
-  .get('/scrape', function (req, res) {
+  .get('/', (req, res) => res.render('pages/index'))
+  .get('/scrape', function (req, res) { // Stands for `request` and `response`
       // ex. dynamic-page-retrieval.herokuapp.com/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html
       var parameter_URL = req.query.URL; // 'URL' is the parameter in the page location (after '?URL=')
 
