@@ -12,7 +12,7 @@ app
   .get('/', (req, res) => res.render('pages/index'))
   .use((req, res, next) => { // CORS headers
       res.append('Access-Control-Allow-Origin', ['*']);
-      res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+      res.append('Access-Control-Allow-Methods', 'GET');
       res.append('Access-Control-Allow-Headers', 'Content-Type');
       next();
   })
