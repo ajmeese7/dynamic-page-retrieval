@@ -8,17 +8,17 @@ can scrape nearly any page.
 
 ## Usage
 
-Simply send a GET request to `https://dynamic-page-retrieval.herokuapp.com` with a URL
+Simply send a GET request to `https://dynamic-page-retrieval.herokuapp.com/scrape` with a URL
 parameter, which should be formatted like so: `?URL=https://www.google.com`.
 
 So, the entire URL for your GET request, if you were going to use the pre-hosted Heroku
-application, would be `https://dynamic-page-retrieval.herokuapp.com?URL=https://www.google.com`
+application, would be `https://dynamic-page-retrieval.herokuapp.com/scrape?URL=https://www.google.com`
 if you wanted to scrape `https://www.google.com`.
 
 An example of how to format this GET request in JavaScript:
 ```javascript
 const Http = new XMLHttpRequest();
-const url = "https://dynamic-page-retrieval.herokuapp.com?URL=https://www.google.com";
+const url = "https://dynamic-page-retrieval.herokuapp.com/scrape?URL=https://www.google.com";
 Http.open("GET", url);
 Http.send();
 Http.onreadystatechange=(e)=>{

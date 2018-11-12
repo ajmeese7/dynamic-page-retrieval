@@ -1,8 +1,8 @@
-const puppeteer = require('puppeteer')
-const express = require('express')
-const path = require('path')
+const puppeteer = require('puppeteer');
+const express = require('express');
+const path = require('path');
 const PORT = process.env.PORT || 5000 // Heroku or local
-var app = express()
+var app = express();
 
 app
   // NOTE: Use the below for fancy display methods for the rest of the application
@@ -20,27 +20,26 @@ app
       // ex. dynamic-page-retrieval.herokuapp.com/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html
       var parameter_URL = req.query.URL; // 'URL' is the parameter in the page location (after '?URL=')
 
-      puppeteer
-        .launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
-        .then(function(browser) {
-          return browser.newPage();
-        })
-        .then(function(page) {
-          return page.goto(parameter_URL).then(function() {
+      (async () => {
+        const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
+        const page = await browser.newPage()
+        await page.goto(parameter_URL).then(() => {
             return page.content();
+          }).then(html => {
+            var obj = { html : html };
+            res.writeHead(200, {"Content-Type": "application/json"}); // Success code
+            res.write(JSON.stringify(obj));
+            res.end();
+          })
+          .catch(err => {
+            console.error(err);
+
+            var obj = { err : err };
+            res.writeHead(404, {"Content-Type": "application/json"}); // Error code
+            res.write(JSON.stringify(obj));
+            res.end();
           });
-        })
-        .then(function(html) {
-          var obj = { html : html };
-          res.writeHead(200, {"Content-Type": "application/json"}); // Success code
-          res.write(JSON.stringify(obj));
-          res.end();
-        })
-        .catch(function(err) {
-          var obj = { err : err };
-          res.writeHead(404, {"Content-Type": "application/json"}); // Error code
-          res.write(JSON.stringify(obj));
-          res.end();
-        });
+        await browser.close()
+      })()
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`)) // localhost:5000
