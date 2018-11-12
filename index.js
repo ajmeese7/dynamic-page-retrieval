@@ -20,43 +20,26 @@ app
       // ex. dynamic-page-retrieval.herokuapp.com/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html
       var parameter_URL = req.query.URL; // 'URL' is the parameter in the page location (after '?URL=')
 
-      puppeteer
-        .launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
-        .then(browser => {
-          return browser.newPage();
-        })
-        .then(page => {
-          return page.goto(parameter_URL).then(() => {
+      (async () => {
+        const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
+        const page = await browser.newPage()
+        await page.goto(parameter_URL).then(() => {
             return page.content();
+          }).then(html => {
+            var obj = { html : html };
+            res.writeHead(200, {"Content-Type": "application/json"}); // Success code
+            res.write(JSON.stringify(obj));
+            res.end();
           })
-        })
-        .then(() => {
-          if (page) {
-            console.log("Attempting to kill page...")
+          .catch(err => {
+            console.error(err);
 
-            // NOTE: If this doesn't fix the memory leak problem, these resources may help:
-            // https://github.com/GoogleChrome/puppeteer/issues/615
-            // https://github.com/GoogleChrome/puppeteer/issues/1047
-            // https://docs.browserless.io/blog/2018/06/04/puppeteer-best-practices.html
-            // https://github.com/GoogleChrome/puppeteer/issues/1345#issuecomment-345138085
-            // https://github.com/GoogleChrome/puppeteer/issues/1825
-            // https://github.com/GoogleChrome/puppeteer/issues/851
-            page.close().then(() => browser.close())
-          }
-        })
-        .then(html => {
-          var obj = { html : html };
-          res.writeHead(200, {"Content-Type": "application/json"}); // Success code
-          res.write(JSON.stringify(obj));
-          res.end();
-        })
-        .catch(err => {
-          console.error(err);
-
-          var obj = { err : err };
-          res.writeHead(404, {"Content-Type": "application/json"}); // Error code
-          res.write(JSON.stringify(obj));
-          res.end();
-        });
+            var obj = { err : err };
+            res.writeHead(404, {"Content-Type": "application/json"}); // Error code
+            res.write(JSON.stringify(obj));
+            res.end();
+          });
+        await browser.close()
+      })()
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`)) // localhost:5000
