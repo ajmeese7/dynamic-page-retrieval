@@ -1,0 +1,482 @@
+2018-11-12T03:56:18.019076+00:00 app[web.1]:     at <anonymous>
+2018-11-12T03:56:18.019077+00:00 app[web.1]:     at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-11-12T03:56:18.019079+00:00 app[web.1]:   -- ASYNC --
+2018-11-12T03:56:18.019080+00:00 app[web.1]:     at Browser.<anonymous> (/app/node_modules/puppeteer/lib/helper.js:144:27)
+2018-11-12T03:56:18.019082+00:00 app[web.1]:     at /app/index.js:27:28
+2018-11-12T03:56:18.019084+00:00 app[web.1]:     at <anonymous>
+2018-11-12T03:56:18.019085+00:00 app[web.1]:     at process._tickCallback (internal/process/next_tick.js:160:7) message: 'Protocol error (Page.enable): Target closed.' }
+2018-11-12T03:56:47.843983+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 30 seconds of SIGTERM
+2018-11-12T03:56:47.844154+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2018-11-12T03:56:47.941768+00:00 heroku[web.1]: Process exited with status 137
+2018-11-12T18:22:05.789195+00:00 heroku[web.1]: Unidling
+2018-11-12T18:22:05.789600+00:00 heroku[web.1]: State changed from down to starting
+2018-11-12T18:22:35.839540+00:00 heroku[web.1]: Starting process with command `node index.js`
+2018-11-12T18:22:38.948931+00:00 app[web.1]: Listening on 35200
+2018-11-12T18:22:39.666861+00:00 heroku[web.1]: State changed from starting to up
+2018-11-12T18:22:44.731689+00:00 heroku[router]: at=info method=GET path="/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html" host=dynamic-page-retrieval.herokuapp.com request_id=2c4f97b4-1897-4379-b48f-8a8462331fff fwd="23.126.90.99" dyno=web.1 connect=1ms service=2856ms status=200 bytes=43551 protocol=http
+2018-11-12T18:23:44.844490+00:00 heroku[router]: at=info method=GET path="/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html" host=dynamic-page-retrieval.herokuapp.com request_id=6091a762-85fd-484b-861d-33f76bda14af fwd="23.126.90.99" dyno=web.1 connect=1ms service=4141ms status=200 bytes=43730 protocol=http
+2018-11-12T18:24:07.278319+00:00 heroku[router]: at=info method=GET path="/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html" host=dynamic-page-retrieval.herokuapp.com request_id=8e2bb145-a6c3-48f9-a276-fc1b1d3188b2 fwd="23.126.90.99" dyno=web.1 connect=1ms service=4811ms status=200 bytes=43731 protocol=http
+2018-11-12T18:24:45.417733+00:00 heroku[router]: at=info method=GET path="/scrape?URL=https://www.nationalgeographic.com/photography/photo-of-the-day/" host=dynamic-page-retrieval.herokuapp.com request_id=5bf04300-c47b-4922-9e41-b95054b2771c fwd="23.126.90.99" dyno=web.1 connect=1ms service=28512ms status=200 bytes=580414 protocol=http
+2018-11-12T18:27:00.542332+00:00 heroku[web.1]: Process running mem=526M(101.8%)
+2018-11-12T18:27:00.542332+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:27:01.054202+00:00 app[web.1]: (node:4) UnhandledPromiseRejectionWarning: Error: Page crashed!
+2018-11-12T18:27:01.054225+00:00 app[web.1]:     at Page._onTargetCrashed (/app/node_modules/puppeteer/lib/Page.js:176:24)
+2018-11-12T18:27:01.054228+00:00 app[web.1]:     at CDPSession.Page.client.on.event (/app/node_modules/puppeteer/lib/Page.js:138:56)
+2018-11-12T18:27:01.054230+00:00 app[web.1]:     at CDPSession.emit (events.js:159:13)
+2018-11-12T18:27:01.054232+00:00 app[web.1]:     at CDPSession._onMessage (/app/node_modules/puppeteer/lib/Connection.js:216:12)
+2018-11-12T18:27:01.054233+00:00 app[web.1]:     at Connection._onMessage (/app/node_modules/puppeteer/lib/Connection.js:99:19)
+2018-11-12T18:27:01.054235+00:00 app[web.1]:     at WebSocketTransport._ws.addEventListener.event (/app/node_modules/puppeteer/lib/WebSocketTransport.js:41:24)
+2018-11-12T18:27:01.054237+00:00 app[web.1]:     at WebSocket.onMessage (/app/node_modules/ws/lib/event-target.js:120:16)
+2018-11-12T18:27:01.054238+00:00 app[web.1]:     at WebSocket.emit (events.js:159:13)
+2018-11-12T18:27:01.054240+00:00 app[web.1]:     at Receiver.receiverOnMessage (/app/node_modules/ws/lib/websocket.js:720:20)
+2018-11-12T18:27:01.054242+00:00 app[web.1]:     at Receiver.emit (events.js:159:13)
+2018-11-12T18:27:01.054583+00:00 app[web.1]: (node:4) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+2018-11-12T18:27:01.055135+00:00 app[web.1]: (node:4) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-11-12T18:27:26.571061+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/scrape?URL=https://www.nationalgeographic.com/photography/photo-of-the-day/" host=dynamic-page-retrieval.herokuapp.com request_id=15c3e128-ed90-4f6f-8902-3bba0ed742b6 fwd="23.126.90.99" dyno=web.1 connect=1ms service=30001ms status=503 bytes=0 protocol=http
+2018-11-12T18:27:26.953155+00:00 app[web.1]: { TimeoutError: Navigation Timeout Exceeded: 30000ms exceeded
+2018-11-12T18:27:26.953167+00:00 app[web.1]:     at Promise.then (/app/node_modules/puppeteer/lib/FrameManager.js:1230:21)
+2018-11-12T18:27:26.953169+00:00 app[web.1]:     at <anonymous>
+2018-11-12T18:27:26.953171+00:00 app[web.1]:   -- ASYNC --
+2018-11-12T18:27:26.953173+00:00 app[web.1]:     at Frame.<anonymous> (/app/node_modules/puppeteer/lib/helper.js:144:27)
+2018-11-12T18:27:26.953177+00:00 app[web.1]:     at Page.goto (/app/node_modules/puppeteer/lib/Page.js:587:49)
+2018-11-12T18:27:26.953179+00:00 app[web.1]:     at Page.<anonymous> (/app/node_modules/puppeteer/lib/helper.js:145:23)
+2018-11-12T18:27:26.953181+00:00 app[web.1]:     at /app/index.js:30:25
+2018-11-12T18:27:26.953182+00:00 app[web.1]:     at <anonymous>
+2018-11-12T18:27:26.953184+00:00 app[web.1]:     at process._tickCallback (internal/process/next_tick.js:160:7) name: 'TimeoutError' }
+2018-11-12T18:27:59.730653+00:00 heroku[web.1]: Process running mem=516M(100.1%)
+2018-11-12T18:27:59.730954+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:28:02.850879+00:00 heroku[router]: at=info method=GET path="/scrape?URL=https://www.nationalgeographic.com/photography/photo-of-the-day/" host=dynamic-page-retrieval.herokuapp.com request_id=d2ccb833-edd2-4d2e-b9a4-fc54e01a15dc fwd="23.126.90.99" dyno=web.1 connect=1ms service=1208ms status=404 bytes=296 protocol=http
+2018-11-12T18:28:02.850014+00:00 app[web.1]: Error: Failed to launch chrome!
+2018-11-12T18:28:02.850031+00:00 app[web.1]: [1112/182801.780468:ERROR:gpu_process_transport_factory.cc(967)] Lost UI shared context.
+2018-11-12T18:28:02.850033+00:00 app[web.1]: [1112/182801.780772:ERROR:platform_thread_posix.cc(128)] pthread_create: Resource temporarily unavailable (11)
+2018-11-12T18:28:02.850035+00:00 app[web.1]: [1112/182801.780997:FATAL:audio_thread_impl.cc(20)] Check failed: thread_.StartWithOptions(thread_options).
+2018-11-12T18:28:02.850037+00:00 app[web.1]: #0 0x55df4d2697df base::debug::StackTrace::StackTrace()
+2018-11-12T18:28:02.850039+00:00 app[web.1]: #1 0x55df4d1e2f70 logging::LogMessage::~LogMessage()
+2018-11-12T18:28:02.850040+00:00 app[web.1]: #2 0x55df4b47f15b media::AudioThreadImpl::AudioThreadImpl()
+2018-11-12T18:28:02.850042+00:00 app[web.1]: #3 0x55df4ba9002f content::BrowserMainLoop::InitializeAudio()
+2018-11-12T18:28:02.850044+00:00 app[web.1]: #4 0x55df4ba8daf1 content::BrowserMainLoop::BrowserThreadsStarted()
+2018-11-12T18:28:02.850045+00:00 app[web.1]: #5 0x55df4be2ab67 content::StartupTaskRunner::RunAllTasksNow()
+2018-11-12T18:28:02.850047+00:00 app[web.1]: #6 0x55df4ba8d2b6 content::BrowserMainLoop::CreateStartupTasks()
+2018-11-12T18:28:02.850048+00:00 app[web.1]: #7 0x55df4ba91060 content::BrowserMainRunnerImpl::Initialize()
+2018-11-12T18:28:02.850050+00:00 app[web.1]: #8 0x55df512055da headless::HeadlessContentMainDelegate::RunProcess()
+2018-11-12T18:28:02.850051+00:00 app[web.1]: #9 0x55df4ce46e46 content::ContentMainRunnerImpl::Run()
+2018-11-12T18:28:02.850053+00:00 app[web.1]: #10 0x55df4ce7842b service_manager::Main()
+2018-11-12T18:28:02.850054+00:00 app[web.1]: #11 0x55df4ce45111 content::ContentMain()
+2018-11-12T18:28:02.850055+00:00 app[web.1]: #12 0x55df51204488 headless::(anonymous namespace)::RunContentMain()
+2018-11-12T18:28:02.850056+00:00 app[web.1]: #13 0x55df51204515 headless::HeadlessBrowserMain()
+2018-11-12T18:28:02.850058+00:00 app[web.1]: #14 0x55df4ce768b2 headless::HeadlessShellMain()
+2018-11-12T18:28:02.850059+00:00 app[web.1]: #15 0x55df4af8d1ac ChromeMain
+2018-11-12T18:28:02.850060+00:00 app[web.1]: #16 0x7fdd8eae7b97 __libc_start_main
+2018-11-12T18:28:02.850061+00:00 app[web.1]: #17 0x55df4af8d02a _start
+2018-11-12T18:28:02.850062+00:00 app[web.1]:
+2018-11-12T18:28:02.850064+00:00 app[web.1]: Received signal 6
+2018-11-12T18:28:02.850065+00:00 app[web.1]: #0 0x55df4d2697df base::debug::StackTrace::StackTrace()
+2018-11-12T18:28:02.850066+00:00 app[web.1]: #1 0x55df4d269351 base::debug::(anonymous namespace)::StackDumpSignalHandler()
+2018-11-12T18:28:02.850067+00:00 app[web.1]: #2 0x7fdd94d5c890 <unknown>
+2018-11-12T18:28:02.850068+00:00 app[web.1]: #3 0x7fdd8eb04e97 gsignal
+2018-11-12T18:28:02.850069+00:00 app[web.1]: #4 0x7fdd8eb06801 abort
+2018-11-12T18:28:02.850070+00:00 app[web.1]: #5 0x55df4d268185 base::debug::BreakDebugger()
+2018-11-12T18:28:02.850071+00:00 app[web.1]: #6 0x55df4d1e33e2 logging::LogMessage::~LogMessage()
+2018-11-12T18:28:02.850072+00:00 app[web.1]: #7 0x55df4b47f15b media::AudioThreadImpl::AudioThreadImpl()
+2018-11-12T18:28:02.850074+00:00 app[web.1]: #8 0x55df4ba9002f content::BrowserMainLoop::InitializeAudio()
+2018-11-12T18:28:02.850075+00:00 app[web.1]: #9 0x55df4ba8daf1 content::BrowserMainLoop::BrowserThreadsStarted()
+2018-11-12T18:28:02.850076+00:00 app[web.1]: #10 0x55df4be2ab67 content::StartupTaskRunner::RunAllTasksNow()
+2018-11-12T18:28:02.850077+00:00 app[web.1]: #11 0x55df4ba8d2b6 content::BrowserMainLoop::CreateStartupTasks()
+2018-11-12T18:28:02.850078+00:00 app[web.1]: #12 0x55df4ba91060 content::BrowserMainRunnerImpl::Initialize()
+2018-11-12T18:28:02.850079+00:00 app[web.1]: #13 0x55df512055da headless::HeadlessContentMainDelegate::RunProcess()
+2018-11-12T18:28:02.850080+00:00 app[web.1]: #14 0x55df4ce46e46 content::ContentMainRunnerImpl::Run()
+2018-11-12T18:28:02.850082+00:00 app[web.1]: #15 0x55df4ce7842b service_manager::Main()
+2018-11-12T18:28:02.850083+00:00 app[web.1]: #16 0x55df4ce45111 content::ContentMain()
+2018-11-12T18:28:02.850084+00:00 app[web.1]: #17 0x55df51204488 headless::(anonymous namespace)::RunContentMain()
+2018-11-12T18:28:02.850085+00:00 app[web.1]: #18 0x55df51204515 headless::HeadlessBrowserMain()
+2018-11-12T18:28:02.850086+00:00 app[web.1]: #19 0x55df4ce768b2 headless::HeadlessShellMain()
+2018-11-12T18:28:02.850088+00:00 app[web.1]: #20 0x55df4af8d1ac ChromeMain
+2018-11-12T18:28:02.850089+00:00 app[web.1]: #21 0x7fdd8eae7b97 __libc_start_main
+2018-11-12T18:28:02.850090+00:00 app[web.1]: #22 0x55df4af8d02a _start
+2018-11-12T18:28:02.850091+00:00 app[web.1]:   r8: 0000000000000000  r9: 00007ffeeade8c10 r10: 0000000000000008 r11: 0000000000000246
+2018-11-12T18:28:02.850092+00:00 app[web.1]:  r12: 00007ffeeade9830 r13: 000000000000006c r14: 00007ffeeade9838 r15: 00007ffeeade9840
+2018-11-12T18:28:02.850093+00:00 app[web.1]:   di: 0000000000000002  si: 00007ffeeade8c10  bp: 00007ffeeade8e60  bx: 00007ffeeade8ec0
+2018-11-12T18:28:02.850094+00:00 app[web.1]:   dx: 0000000000000000  ax: 0000000000000000  cx: 00007fdd8eb04e97  sp: 00007ffeeade8c10
+2018-11-12T18:28:02.850095+00:00 app[web.1]:   ip: 00007fdd8eb04e97 efl: 0000000000000246 cgf: 0000000000000033 erf: 0000000000000000
+2018-11-12T18:28:02.850096+00:00 app[web.1]:  trp: 0000000000000000 msk: 0000000000000000 cr2: 0000000000000000
+2018-11-12T18:28:02.850097+00:00 app[web.1]: [end of stack trace]
+2018-11-12T18:28:02.850099+00:00 app[web.1]: Calling _exit(1). Core file will not be generated.
+2018-11-12T18:28:02.850100+00:00 app[web.1]:
+2018-11-12T18:28:02.850101+00:00 app[web.1]:
+2018-11-12T18:28:02.850102+00:00 app[web.1]: TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+2018-11-12T18:28:02.850103+00:00 app[web.1]:
+2018-11-12T18:28:02.850104+00:00 app[web.1]:     at onClose (/app/node_modules/puppeteer/lib/Launcher.js:342:14)
+2018-11-12T18:28:02.850105+00:00 app[web.1]:     at ChildProcess.helper.addEventListener (/app/node_modules/puppeteer/lib/Launcher.js:332:60)
+2018-11-12T18:28:02.850106+00:00 app[web.1]:     at ChildProcess.emit (events.js:164:20)
+2018-11-12T18:28:02.850107+00:00 app[web.1]:     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:12)
+2018-11-12T18:28:20.267497+00:00 heroku[web.1]: Process running mem=534M(104.5%)
+2018-11-12T18:28:20.267672+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:28:39.902300+00:00 heroku[web.1]: Process running mem=536M(104.7%)
+2018-11-12T18:28:39.902453+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:28:42.152700+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html" host=dynamic-page-retrieval.herokuapp.com request_id=888568cd-4e15-4c1b-b391-64fba190a5e3 fwd="23.126.90.99" dyno=web.1 connect=1ms service=30000ms status=503 bytes=0 protocol=http
+2018-11-12T18:28:42.170406+00:00 app[web.1]: { TimeoutError: Timed out after 30000 ms while trying to connect to Chrome! The only Chrome revision guaranteed to work is r599821
+2018-11-12T18:28:42.170419+00:00 app[web.1]:     at Timeout.onTimeout (/app/node_modules/puppeteer/lib/Launcher.js:353:14)
+2018-11-12T18:28:42.170421+00:00 app[web.1]:     at ontimeout (timers.js:466:11)
+2018-11-12T18:28:42.170423+00:00 app[web.1]:     at tryOnTimeout (timers.js:304:5)
+2018-11-12T18:28:42.170424+00:00 app[web.1]:     at Timer.listOnTimeout (timers.js:264:5) name: 'TimeoutError' }
+2018-11-12T18:28:59.905986+00:00 heroku[web.1]: Process running mem=517M(101.1%)
+2018-11-12T18:28:59.905986+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:29:12.268500+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html" host=dynamic-page-retrieval.herokuapp.com request_id=8cda7901-39b3-434b-a517-d446ec452c16 fwd="23.126.90.99" dyno=web.1 connect=1ms service=30001ms status=503 bytes=0 protocol=http
+2018-11-12T18:29:20.630534+00:00 heroku[web.1]: Process running mem=517M(101.0%)
+2018-11-12T18:29:20.630673+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:29:39.138978+00:00 heroku[web.1]: Process running mem=516M(100.9%)
+2018-11-12T18:29:39.139041+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:29:59.942193+00:00 heroku[web.1]: Process running mem=515M(100.6%)
+2018-11-12T18:29:59.942329+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:30:20.316822+00:00 heroku[web.1]: Process running mem=515M(100.6%)
+2018-11-12T18:30:20.316941+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:30:24.726724+00:00 heroku[router]: at=info method=GET path="/scrape?URL=https://www.nasa.gov/multimedia/imagegallery/iotd.html" host=dynamic-page-retrieval.herokuapp.com request_id=13aaac85-d51e-4603-8dd7-eaa74248ad81 fwd="23.126.90.99" dyno=web.1 connect=0ms service=1087ms status=404 bytes=296 protocol=http
+2018-11-12T18:30:24.725458+00:00 app[web.1]: Error: Failed to launch chrome!
+2018-11-12T18:30:24.725472+00:00 app[web.1]: [1112/183023.742629:ERROR:platform_thread_posix.cc(128)] pthread_create: Resource temporarily unavailable (11)
+2018-11-12T18:30:24.725474+00:00 app[web.1]: [1112/183023.742685:FATAL:simple_thread.cc(56)] Check failed: success.
+2018-11-12T18:30:24.725477+00:00 app[web.1]: #0 0x55d457c8c7df base::debug::StackTrace::StackTrace()
+2018-11-12T18:30:24.725479+00:00 app[web.1]: #1 0x55d457c05f70 logging::LogMessage::~LogMessage()
+2018-11-12T18:30:24.725481+00:00 app[web.1]: #2 0x55d457c6357f base::SimpleThread::Start()
+2018-11-12T18:30:24.725484+00:00 app[web.1]: #3 0x55d456909b16 content::GpuProcessTransportFactory::GpuProcessTransportFactory()
+2018-11-12T18:30:24.725486+00:00 app[web.1]: #4 0x55d4564b0a33 content::BrowserMainLoop::BrowserThreadsStarted()
+2018-11-12T18:30:24.725487+00:00 app[web.1]: #5 0x55d45684db67 content::StartupTaskRunner::RunAllTasksNow()
+2018-11-12T18:30:24.725489+00:00 app[web.1]: #6 0x55d4564b02b6 content::BrowserMainLoop::CreateStartupTasks()
+2018-11-12T18:30:24.725491+00:00 app[web.1]: #7 0x55d4564b4060 content::BrowserMainRunnerImpl::Initialize()
+2018-11-12T18:30:24.725492+00:00 app[web.1]: #8 0x55d45bc285da headless::HeadlessContentMainDelegate::RunProcess()
+2018-11-12T18:30:24.725494+00:00 app[web.1]: #9 0x55d457869e46 content::ContentMainRunnerImpl::Run()
+2018-11-12T18:30:24.725496+00:00 app[web.1]: #10 0x55d45789b42b service_manager::Main()
+2018-11-12T18:30:24.725498+00:00 app[web.1]: #11 0x55d457868111 content::ContentMain()
+2018-11-12T18:30:24.725499+00:00 app[web.1]: #12 0x55d45bc27488 headless::(anonymous namespace)::RunContentMain()
+2018-11-12T18:30:24.725501+00:00 app[web.1]: #13 0x55d45bc27515 headless::HeadlessBrowserMain()
+2018-11-12T18:30:24.725502+00:00 app[web.1]: #14 0x55d4578998b2 headless::HeadlessShellMain()
+2018-11-12T18:30:24.725504+00:00 app[web.1]: #15 0x55d4559b01ac ChromeMain
+2018-11-12T18:30:24.725505+00:00 app[web.1]: #16 0x7f8ebdda3b97 __libc_start_main
+2018-11-12T18:30:24.725507+00:00 app[web.1]: #17 0x55d4559b002a _start
+2018-11-12T18:30:24.725510+00:00 app[web.1]:
+2018-11-12T18:30:24.725512+00:00 app[web.1]: Received signal 6
+2018-11-12T18:30:24.725513+00:00 app[web.1]: #0 0x55d457c8c7df base::debug::StackTrace::StackTrace()
+2018-11-12T18:30:24.725515+00:00 app[web.1]: #1 0x55d457c8c351 base::debug::(anonymous namespace)::StackDumpSignalHandler()
+2018-11-12T18:30:24.725516+00:00 app[web.1]: #2 0x7f8ec4018890 <unknown>
+2018-11-12T18:30:24.725518+00:00 app[web.1]: #3 0x7f8ebddc0e97 gsignal
+2018-11-12T18:30:24.725519+00:00 app[web.1]: #4 0x7f8ebddc2801 abort
+2018-11-12T18:30:24.725521+00:00 app[web.1]: #5 0x55d457c8b185 base::debug::BreakDebugger()
+2018-11-12T18:30:24.725522+00:00 app[web.1]: #6 0x55d457c063e2 logging::LogMessage::~LogMessage()
+2018-11-12T18:30:24.725524+00:00 app[web.1]: #7 0x55d457c6357f base::SimpleThread::Start()
+2018-11-12T18:30:24.725526+00:00 app[web.1]: #8 0x55d456909b16 content::GpuProcessTransportFactory::GpuProcessTransportFactory()
+2018-11-12T18:30:24.725527+00:00 app[web.1]: #9 0x55d4564b0a33 content::BrowserMainLoop::BrowserThreadsStarted()
+2018-11-12T18:30:24.725529+00:00 app[web.1]: #10 0x55d45684db67 content::StartupTaskRunner::RunAllTasksNow()
+2018-11-12T18:30:24.725530+00:00 app[web.1]: #11 0x55d4564b02b6 content::BrowserMainLoop::CreateStartupTasks()
+2018-11-12T18:30:24.725532+00:00 app[web.1]: #12 0x55d4564b4060 content::BrowserMainRunnerImpl::Initialize()
+2018-11-12T18:30:24.725534+00:00 app[web.1]: #13 0x55d45bc285da headless::HeadlessContentMainDelegate::RunProcess()
+2018-11-12T18:30:24.725535+00:00 app[web.1]: #14 0x55d457869e46 content::ContentMainRunnerImpl::Run()
+2018-11-12T18:30:24.725537+00:00 app[web.1]: #15 0x55d45789b42b service_manager::Main()
+2018-11-12T18:30:24.725538+00:00 app[web.1]: #16 0x55d457868111 content::ContentMain()
+2018-11-12T18:30:24.725540+00:00 app[web.1]: #17 0x55d45bc27488 headless::(anonymous namespace)::RunContentMain()
+2018-11-12T18:30:24.725541+00:00 app[web.1]: #18 0x55d45bc27515 headless::HeadlessBrowserMain()
+2018-11-12T18:30:24.725543+00:00 app[web.1]: #19 0x55d4578998b2 headless::HeadlessShellMain()
+2018-11-12T18:30:24.725544+00:00 app[web.1]: #20 0x55d4559b01ac ChromeMain
+2018-11-12T18:30:24.725545+00:00 app[web.1]: #21 0x7f8ebdda3b97 __libc_start_main
+2018-11-12T18:30:24.725547+00:00 app[web.1]: #22 0x55d4559b002a _start
+2018-11-12T18:30:24.725549+00:00 app[web.1]:   r8: 0000000000000000  r9: 00007ffe7ed117e0 r10: 0000000000000008 r11: 0000000000000246
+2018-11-12T18:30:24.725550+00:00 app[web.1]:  r12: 00007ffe7ed123d0 r13: 0000000000000047 r14: 00007ffe7ed123d8 r15: 00007ffe7ed123e0
+2018-11-12T18:30:24.725552+00:00 app[web.1]:   di: 0000000000000002  si: 00007ffe7ed117e0  bp: 00007ffe7ed11a30  bx: 00007ffe7ed11a90
+2018-11-12T18:30:24.725553+00:00 app[web.1]:   dx: 0000000000000000  ax: 0000000000000000  cx: 00007f8ebddc0e97  sp: 00007ffe7ed117e0
+2018-11-12T18:30:24.725555+00:00 app[web.1]:   ip: 00007f8ebddc0e97 efl: 0000000000000246 cgf: 000f000000000033 erf: 0000000000000000
+2018-11-12T18:30:24.725556+00:00 app[web.1]:  trp: 0000000000000000 msk: 0000000000000000 cr2: 0000000000000000
+2018-11-12T18:30:24.725558+00:00 app[web.1]: [end of stack trace]
+2018-11-12T18:30:24.725560+00:00 app[web.1]: Calling _exit(1). Core file will not be generated.
+2018-11-12T18:30:24.725561+00:00 app[web.1]:
+2018-11-12T18:30:24.725562+00:00 app[web.1]:
+2018-11-12T18:30:24.725564+00:00 app[web.1]: TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+2018-11-12T18:30:24.725565+00:00 app[web.1]:
+2018-11-12T18:30:24.725567+00:00 app[web.1]:     at onClose (/app/node_modules/puppeteer/lib/Launcher.js:342:14)
+2018-11-12T18:30:24.725568+00:00 app[web.1]:     at Interface.helper.addEventListener (/app/node_modules/puppeteer/lib/Launcher.js:331:50)
+2018-11-12T18:30:24.725570+00:00 app[web.1]:     at Interface.emit (events.js:164:20)
+2018-11-12T18:30:24.725571+00:00 app[web.1]:     at Interface.close (readline.js:381:8)
+2018-11-12T18:30:24.725573+00:00 app[web.1]:     at Socket.onend (readline.js:154:10)
+2018-11-12T18:30:24.725574+00:00 app[web.1]:     at Socket.emit (events.js:164:20)
+2018-11-12T18:30:24.725576+00:00 app[web.1]:     at endReadableNT (_stream_readable.js:1062:12)
+2018-11-12T18:30:24.725577+00:00 app[web.1]:     at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-11-12T18:30:27.271912+00:00 heroku[router]: at=info method=GET path="/scrape?URL=https://www.nationalgeographic.com/photography/photo-of-the-day/" host=dynamic-page-retrieval.herokuapp.com request_id=b93282d1-027f-4d8c-9e91-ad9d5af6b7e2 fwd="23.126.90.99" dyno=web.1 connect=2ms service=1086ms status=404 bytes=296 protocol=http
+2018-11-12T18:30:27.270445+00:00 app[web.1]: Error: Failed to launch chrome!
+2018-11-12T18:30:27.270458+00:00 app[web.1]: [1112/183026.291000:ERROR:gpu_process_transport_factory.cc(967)] Lost UI shared context.
+2018-11-12T18:30:27.270460+00:00 app[web.1]: [1112/183026.291386:ERROR:platform_thread_posix.cc(128)] pthread_create: Resource temporarily unavailable (11)
+2018-11-12T18:30:27.270462+00:00 app[web.1]: [1112/183026.291516:FATAL:audio_thread_impl.cc(20)] Check failed: thread_.StartWithOptions(thread_options).
+2018-11-12T18:30:27.270464+00:00 app[web.1]: #0 0x55efe6d947df base::debug::StackTrace::StackTrace()
+2018-11-12T18:30:27.270465+00:00 app[web.1]: #1 0x55efe6d0df70 logging::LogMessage::~LogMessage()
+2018-11-12T18:30:27.270467+00:00 app[web.1]: #2 0x55efe4faa15b media::AudioThreadImpl::AudioThreadImpl()
+2018-11-12T18:30:27.270468+00:00 app[web.1]: #3 0x55efe55bb02f content::BrowserMainLoop::InitializeAudio()
+2018-11-12T18:30:27.270470+00:00 app[web.1]: #4 0x55efe55b8af1 content::BrowserMainLoop::BrowserThreadsStarted()
+2018-11-12T18:30:27.270472+00:00 app[web.1]: #5 0x55efe5955b67 content::StartupTaskRunner::RunAllTasksNow()
+2018-11-12T18:30:27.270473+00:00 app[web.1]: #6 0x55efe55b82b6 content::BrowserMainLoop::CreateStartupTasks()
+2018-11-12T18:30:27.270475+00:00 app[web.1]: #7 0x55efe55bc060 content::BrowserMainRunnerImpl::Initialize()
+2018-11-12T18:30:27.270476+00:00 app[web.1]: #8 0x55efead305da headless::HeadlessContentMainDelegate::RunProcess()
+2018-11-12T18:30:27.270478+00:00 app[web.1]: #9 0x55efe6971e46 content::ContentMainRunnerImpl::Run()
+2018-11-12T18:30:27.270480+00:00 app[web.1]: #10 0x55efe69a342b service_manager::Main()
+2018-11-12T18:30:27.270482+00:00 app[web.1]: #11 0x55efe6970111 content::ContentMain()
+2018-11-12T18:30:27.270483+00:00 app[web.1]: #12 0x55efead2f488 headless::(anonymous namespace)::RunContentMain()
+2018-11-12T18:30:27.270485+00:00 app[web.1]: #13 0x55efead2f515 headless::HeadlessBrowserMain()
+2018-11-12T18:30:27.270486+00:00 app[web.1]: #14 0x55efe69a18b2 headless::HeadlessShellMain()
+2018-11-12T18:30:27.270488+00:00 app[web.1]: #15 0x55efe4ab81ac ChromeMain
+2018-11-12T18:30:27.270489+00:00 app[web.1]: #16 0x7f746647ab97 __libc_start_main
+2018-11-12T18:30:27.270491+00:00 app[web.1]: #17 0x55efe4ab802a _start
+2018-11-12T18:30:27.270493+00:00 app[web.1]:
+2018-11-12T18:30:27.270494+00:00 app[web.1]: Received signal 6
+2018-11-12T18:30:27.270496+00:00 app[web.1]: #0 0x55efe6d947df base::debug::StackTrace::StackTrace()
+2018-11-12T18:30:27.270498+00:00 app[web.1]: #1 0x55efe6d94351 base::debug::(anonymous namespace)::StackDumpSignalHandler()
+2018-11-12T18:30:27.270499+00:00 app[web.1]: #2 0x7f746c6ef890 <unknown>
+2018-11-12T18:30:27.270500+00:00 app[web.1]: #3 0x7f7466497e97 gsignal
+2018-11-12T18:30:27.270502+00:00 app[web.1]: #4 0x7f7466499801 abort
+2018-11-12T18:30:27.270504+00:00 app[web.1]: #5 0x55efe6d93185 base::debug::BreakDebugger()
+2018-11-12T18:30:27.270505+00:00 app[web.1]: #6 0x55efe6d0e3e2 logging::LogMessage::~LogMessage()
+2018-11-12T18:30:27.270507+00:00 app[web.1]: #7 0x55efe4faa15b media::AudioThreadImpl::AudioThreadImpl()
+2018-11-12T18:30:27.270508+00:00 app[web.1]: #8 0x55efe55bb02f content::BrowserMainLoop::InitializeAudio()
+2018-11-12T18:30:27.270510+00:00 app[web.1]: #9 0x55efe55b8af1 content::BrowserMainLoop::BrowserThreadsStarted()
+2018-11-12T18:30:27.270511+00:00 app[web.1]: #10 0x55efe5955b67 content::StartupTaskRunner::RunAllTasksNow()
+2018-11-12T18:30:27.270513+00:00 app[web.1]: #11 0x55efe55b82b6 content::BrowserMainLoop::CreateStartupTasks()
+2018-11-12T18:30:27.270514+00:00 app[web.1]: #12 0x55efe55bc060 content::BrowserMainRunnerImpl::Initialize()
+2018-11-12T18:30:27.270516+00:00 app[web.1]: #13 0x55efead305da headless::HeadlessContentMainDelegate::RunProcess()
+2018-11-12T18:30:27.270517+00:00 app[web.1]: #14 0x55efe6971e46 content::ContentMainRunnerImpl::Run()
+2018-11-12T18:30:27.270519+00:00 app[web.1]: #15 0x55efe69a342b service_manager::Main()
+2018-11-12T18:30:27.270520+00:00 app[web.1]: #16 0x55efe6970111 content::ContentMain()
+2018-11-12T18:30:27.270522+00:00 app[web.1]: #17 0x55efead2f488 headless::(anonymous namespace)::RunContentMain()
+2018-11-12T18:30:27.270524+00:00 app[web.1]: #18 0x55efead2f515 headless::HeadlessBrowserMain()
+2018-11-12T18:30:27.270525+00:00 app[web.1]: #19 0x55efe69a18b2 headless::HeadlessShellMain()
+2018-11-12T18:30:27.270527+00:00 app[web.1]: #20 0x55efe4ab81ac ChromeMain
+2018-11-12T18:30:27.270528+00:00 app[web.1]: #21 0x7f746647ab97 __libc_start_main
+2018-11-12T18:30:27.270529+00:00 app[web.1]: #22 0x55efe4ab802a _start
+2018-11-12T18:30:27.270531+00:00 app[web.1]:   r8: 0000000000000000  r9: 00007fff5bd4bfe0 r10: 0000000000000008 r11: 0000000000000246
+2018-11-12T18:30:27.270533+00:00 app[web.1]:  r12: 00007fff5bd4cc00 r13: 000000000000006c r14: 00007fff5bd4cc08 r15: 00007fff5bd4cc10
+2018-11-12T18:30:27.270534+00:00 app[web.1]:   di: 0000000000000002  si: 00007fff5bd4bfe0  bp: 00007fff5bd4c230  bx: 00007fff5bd4c290
+2018-11-12T18:30:27.270536+00:00 app[web.1]:   dx: 0000000000000000  ax: 0000000000000000  cx: 00007f7466497e97  sp: 00007fff5bd4bfe0
+2018-11-12T18:30:27.270537+00:00 app[web.1]:   ip: 00007f7466497e97 efl: 0000000000000246 cgf: 000f000000000033 erf: 0000000000000000
+2018-11-12T18:30:27.270539+00:00 app[web.1]:  trp: 0000000000000000 msk: 0000000000000000 cr2: 0000000000000000
+2018-11-12T18:30:27.270540+00:00 app[web.1]: [end of stack trace]
+2018-11-12T18:30:27.270542+00:00 app[web.1]: Calling _exit(1). Core file will not be generated.
+2018-11-12T18:30:27.270543+00:00 app[web.1]:
+2018-11-12T18:30:27.270544+00:00 app[web.1]:
+2018-11-12T18:30:27.270546+00:00 app[web.1]: TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+2018-11-12T18:30:27.270547+00:00 app[web.1]:
+2018-11-12T18:30:27.270549+00:00 app[web.1]:     at onClose (/app/node_modules/puppeteer/lib/Launcher.js:342:14)
+2018-11-12T18:30:27.270550+00:00 app[web.1]:     at Interface.helper.addEventListener (/app/node_modules/puppeteer/lib/Launcher.js:331:50)
+2018-11-12T18:30:27.270552+00:00 app[web.1]:     at Interface.emit (events.js:164:20)
+2018-11-12T18:30:27.270553+00:00 app[web.1]:     at Interface.close (readline.js:381:8)
+2018-11-12T18:30:27.270555+00:00 app[web.1]:     at Socket.onend (readline.js:154:10)
+2018-11-12T18:30:27.270556+00:00 app[web.1]:     at Socket.emit (events.js:164:20)
+2018-11-12T18:30:27.270558+00:00 app[web.1]:     at endReadableNT (_stream_readable.js:1062:12)
+2018-11-12T18:30:27.270560+00:00 app[web.1]:     at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-11-12T18:30:40.084089+00:00 heroku[web.1]: Process running mem=516M(100.8%)
+2018-11-12T18:30:40.084258+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:31:00.984313+00:00 heroku[web.1]: Process running mem=516M(100.8%)
+2018-11-12T18:31:00.984638+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:31:20.252032+00:00 heroku[web.1]: Process running mem=517M(101.1%)
+2018-11-12T18:31:20.252090+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:31:40.158233+00:00 heroku[web.1]: Process running mem=518M(101.2%)
+2018-11-12T18:31:40.158233+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:32:00.507828+00:00 heroku[web.1]: Process running mem=518M(101.2%)
+2018-11-12T18:32:00.507968+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:32:20.516193+00:00 heroku[web.1]: Process running mem=520M(101.5%)
+2018-11-12T18:32:20.516351+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:32:40.514944+00:00 heroku[web.1]: Process running mem=521M(101.8%)
+2018-11-12T18:32:40.515073+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:32:59.928588+00:00 heroku[web.1]: Process running mem=521M(101.9%)
+2018-11-12T18:32:59.928806+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:33:20.492582+00:00 heroku[web.1]: Process running mem=522M(102.0%)
+2018-11-12T18:33:20.492639+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:33:40.651758+00:00 heroku[web.1]: Process running mem=524M(102.3%)
+2018-11-12T18:33:40.651868+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:33:59.804897+00:00 heroku[web.1]: Process running mem=524M(102.3%)
+2018-11-12T18:33:59.805136+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:34:20.031354+00:00 heroku[web.1]: Process running mem=524M(102.4%)
+2018-11-12T18:34:20.032182+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:34:39.849916+00:00 heroku[web.1]: Process running mem=523M(102.3%)
+2018-11-12T18:34:39.849993+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:34:59.785808+00:00 heroku[web.1]: Process running mem=523M(102.3%)
+2018-11-12T18:34:59.785969+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:35:20.208525+00:00 heroku[web.1]: Process running mem=521M(101.8%)
+2018-11-12T18:35:20.208657+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:35:39.908443+00:00 heroku[web.1]: Process running mem=522M(101.9%)
+2018-11-12T18:35:39.908529+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:36:00.075033+00:00 heroku[web.1]: Process running mem=522M(102.1%)
+2018-11-12T18:36:00.075235+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:36:19.488096+00:00 heroku[web.1]: Process running mem=523M(102.2%)
+2018-11-12T18:36:19.488300+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:36:40.520165+00:00 heroku[web.1]: Process running mem=524M(102.3%)
+2018-11-12T18:36:40.520301+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:37:00.155941+00:00 heroku[web.1]: Process running mem=525M(102.5%)
+2018-11-12T18:37:00.156180+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:37:19.739407+00:00 heroku[web.1]: Process running mem=526M(102.7%)
+2018-11-12T18:37:19.739542+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:37:40.480381+00:00 heroku[web.1]: Process running mem=526M(102.8%)
+2018-11-12T18:37:40.480567+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:38:00.170885+00:00 heroku[web.1]: Process running mem=527M(103.0%)
+2018-11-12T18:38:00.171037+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:38:20.294033+00:00 heroku[web.1]: Process running mem=527M(103.1%)
+2018-11-12T18:38:20.294140+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:38:40.578343+00:00 heroku[web.1]: Process running mem=528M(103.1%)
+2018-11-12T18:38:40.578580+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:39:00.127416+00:00 heroku[web.1]: Process running mem=527M(103.0%)
+2018-11-12T18:39:00.127619+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:39:20.434875+00:00 heroku[web.1]: Process running mem=528M(103.1%)
+2018-11-12T18:39:20.435114+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:39:40.535194+00:00 heroku[web.1]: Process running mem=525M(102.6%)
+2018-11-12T18:39:40.535253+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:40:00.200869+00:00 heroku[web.1]: Process running mem=526M(102.8%)
+2018-11-12T18:40:00.200869+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:40:19.628570+00:00 heroku[web.1]: Process running mem=526M(102.9%)
+2018-11-12T18:40:19.628737+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:40:40.139153+00:00 heroku[web.1]: Process running mem=528M(103.2%)
+2018-11-12T18:40:40.139243+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:41:00.049690+00:00 heroku[web.1]: Process running mem=528M(103.2%)
+2018-11-12T18:41:00.049767+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:41:20.424792+00:00 heroku[web.1]: Process running mem=528M(103.2%)
+2018-11-12T18:41:20.425311+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:41:39.832618+00:00 heroku[web.1]: Process running mem=530M(103.5%)
+2018-11-12T18:41:39.832756+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:41:59.753541+00:00 heroku[web.1]: Process running mem=531M(103.8%)
+2018-11-12T18:41:59.753639+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:42:19.931067+00:00 heroku[web.1]: Process running mem=532M(104.0%)
+2018-11-12T18:42:19.931067+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:42:40.210029+00:00 heroku[web.1]: Process running mem=533M(104.2%)
+2018-11-12T18:42:40.210181+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:42:59.719117+00:00 heroku[web.1]: Process running mem=534M(104.3%)
+2018-11-12T18:42:59.719275+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:43:19.869138+00:00 heroku[web.1]: Process running mem=533M(104.1%)
+2018-11-12T18:43:19.869193+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:43:39.936168+00:00 heroku[web.1]: Process running mem=532M(104.0%)
+2018-11-12T18:43:39.936298+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:43:59.763062+00:00 heroku[web.1]: Process running mem=533M(104.2%)
+2018-11-12T18:43:59.763197+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:44:20.087649+00:00 heroku[web.1]: Process running mem=533M(104.2%)
+2018-11-12T18:44:20.087779+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:44:40.261998+00:00 heroku[web.1]: Process running mem=532M(104.0%)
+2018-11-12T18:44:40.262156+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:45:00.375865+00:00 heroku[web.1]: Process running mem=533M(104.2%)
+2018-11-12T18:45:00.376014+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:45:19.930951+00:00 heroku[web.1]: Process running mem=534M(104.4%)
+2018-11-12T18:45:19.931080+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:45:40.045941+00:00 heroku[web.1]: Process running mem=535M(104.5%)
+2018-11-12T18:45:40.046132+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:46:00.346953+00:00 heroku[web.1]: Process running mem=534M(104.4%)
+2018-11-12T18:46:00.347146+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:46:19.933038+00:00 heroku[web.1]: Process running mem=535M(104.6%)
+2018-11-12T18:46:19.933166+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:46:40.212726+00:00 heroku[web.1]: Process running mem=536M(104.7%)
+2018-11-12T18:46:40.212881+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:47:00.513052+00:00 heroku[web.1]: Process running mem=537M(105.0%)
+2018-11-12T18:47:00.513052+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:47:20.439770+00:00 heroku[web.1]: Process running mem=539M(105.3%)
+2018-11-12T18:47:20.439899+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:47:40.376483+00:00 heroku[web.1]: Process running mem=538M(105.1%)
+2018-11-12T18:47:40.376732+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:47:59.957225+00:00 heroku[web.1]: Process running mem=536M(104.8%)
+2018-11-12T18:47:59.957379+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:48:20.622241+00:00 heroku[web.1]: Process running mem=537M(104.9%)
+2018-11-12T18:48:20.622241+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:48:40.297313+00:00 heroku[web.1]: Process running mem=536M(104.8%)
+2018-11-12T18:48:40.297313+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:49:00.374786+00:00 heroku[web.1]: Process running mem=536M(104.8%)
+2018-11-12T18:49:00.374959+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:49:19.919946+00:00 heroku[web.1]: Process running mem=536M(104.7%)
+2018-11-12T18:49:19.920083+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:49:39.988159+00:00 heroku[web.1]: Process running mem=535M(104.6%)
+2018-11-12T18:49:39.988274+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:49:59.862612+00:00 heroku[web.1]: Process running mem=536M(104.8%)
+2018-11-12T18:49:59.862737+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:50:20.923160+00:00 heroku[web.1]: Process running mem=537M(104.9%)
+2018-11-12T18:50:20.923282+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:50:40.277005+00:00 heroku[web.1]: Process running mem=537M(105.0%)
+2018-11-12T18:50:40.277005+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:51:00.086712+00:00 heroku[web.1]: Process running mem=538M(105.2%)
+2018-11-12T18:51:00.086967+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:51:20.146247+00:00 heroku[web.1]: Process running mem=539M(105.3%)
+2018-11-12T18:51:20.146817+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:51:39.825763+00:00 heroku[web.1]: Process running mem=539M(105.3%)
+2018-11-12T18:51:39.826096+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:52:00.516698+00:00 heroku[web.1]: Process running mem=540M(105.5%)
+2018-11-12T18:52:00.516915+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:52:20.233649+00:00 heroku[web.1]: Process running mem=540M(105.6%)
+2018-11-12T18:52:20.233786+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:52:40.326818+00:00 heroku[web.1]: Process running mem=541M(105.8%)
+2018-11-12T18:52:40.327014+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:52:59.369441+00:00 heroku[web.1]: Process running mem=541M(105.8%)
+2018-11-12T18:52:59.369532+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:53:20.297348+00:00 heroku[web.1]: Process running mem=540M(105.6%)
+2018-11-12T18:53:20.297429+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:53:40.446223+00:00 heroku[web.1]: Process running mem=541M(105.8%)
+2018-11-12T18:53:40.446697+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:54:00.096831+00:00 heroku[web.1]: Process running mem=539M(105.3%)
+2018-11-12T18:54:00.096831+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:54:20.655771+00:00 heroku[web.1]: Process running mem=539M(105.3%)
+2018-11-12T18:54:20.655851+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:54:40.267814+00:00 heroku[web.1]: Process running mem=539M(105.4%)
+2018-11-12T18:54:40.267937+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:55:00.090141+00:00 heroku[web.1]: Process running mem=540M(105.6%)
+2018-11-12T18:55:00.090422+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:55:19.898173+00:00 heroku[web.1]: Process running mem=541M(105.8%)
+2018-11-12T18:55:19.898282+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:55:40.154027+00:00 heroku[web.1]: Process running mem=542M(105.9%)
+2018-11-12T18:55:40.154119+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:55:59.834231+00:00 heroku[web.1]: Process running mem=542M(105.9%)
+2018-11-12T18:55:59.834231+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:56:19.594020+00:00 heroku[web.1]: Process running mem=544M(106.4%)
+2018-11-12T18:56:19.594155+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:56:40.285380+00:00 heroku[web.1]: Process running mem=544M(106.3%)
+2018-11-12T18:56:40.285495+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:56:59.847206+00:00 heroku[web.1]: Process running mem=546M(106.7%)
+2018-11-12T18:56:59.847321+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:57:19.442241+00:00 heroku[web.1]: Process running mem=546M(106.7%)
+2018-11-12T18:57:19.442241+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:57:40.015395+00:00 heroku[web.1]: Process running mem=547M(106.8%)
+2018-11-12T18:57:40.015395+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:58:00.005697+00:00 heroku[web.1]: Process running mem=545M(106.6%)
+2018-11-12T18:58:00.005894+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:58:20.082143+00:00 heroku[web.1]: Process running mem=545M(106.6%)
+2018-11-12T18:58:20.082299+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:58:39.943929+00:00 heroku[web.1]: Process running mem=544M(106.4%)
+2018-11-12T18:58:39.944061+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:58:59.602738+00:00 heroku[web.1]: Process running mem=545M(106.5%)
+2018-11-12T18:58:59.602738+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:59:20.185617+00:00 heroku[web.1]: Process running mem=545M(106.6%)
+2018-11-12T18:59:20.185617+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:59:40.099416+00:00 heroku[web.1]: Process running mem=546M(106.8%)
+2018-11-12T18:59:40.099464+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T18:59:59.870797+00:00 heroku[web.1]: Process running mem=546M(106.8%)
+2018-11-12T18:59:59.870907+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:00:20.196733+00:00 heroku[web.1]: Process running mem=548M(107.0%)
+2018-11-12T19:00:20.196792+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:00:40.242350+00:00 heroku[web.1]: Process running mem=548M(107.1%)
+2018-11-12T19:00:40.242350+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:01:00.326595+00:00 heroku[web.1]: Process running mem=550M(107.4%)
+2018-11-12T19:01:00.326668+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:01:20.008883+00:00 heroku[web.1]: Process running mem=551M(107.6%)
+2018-11-12T19:01:20.008970+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:01:40.152062+00:00 heroku[web.1]: Process running mem=550M(107.5%)
+2018-11-12T19:01:40.152145+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:02:00.084302+00:00 heroku[web.1]: Process running mem=551M(107.7%)
+2018-11-12T19:02:00.084424+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:02:20.251261+00:00 heroku[web.1]: Process running mem=550M(107.4%)
+2018-11-12T19:02:20.251261+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:02:40.168855+00:00 heroku[web.1]: Process running mem=549M(107.3%)
+2018-11-12T19:02:40.168989+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:03:00.329955+00:00 heroku[web.1]: Process running mem=549M(107.3%)
+2018-11-12T19:03:00.329955+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:03:19.955834+00:00 heroku[web.1]: Process running mem=548M(107.1%)
+2018-11-12T19:03:19.955978+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:03:27.820450+00:00 heroku[web.1]: Idling
+2018-11-12T19:03:27.820938+00:00 heroku[web.1]: State changed from up to down
+2018-11-12T19:03:28.822556+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-11-12T19:03:58.828891+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 30 seconds of SIGTERM
+2018-11-12T19:03:58.828891+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2018-11-12T19:03:58.942229+00:00 heroku[web.1]: Process exited with status 137
+Disconnected from log stream. There may be events happening that you do not see here! Attempting to reconnect...
+2018-11-12T19:03:00.329955+00:00 heroku[web.1]: Process running mem=549M(107.3%)
+2018-11-12T19:03:00.329955+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:03:19.955834+00:00 heroku[web.1]: Process running mem=548M(107.1%)
+2018-11-12T19:03:19.955978+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2018-11-12T19:03:27.820450+00:00 heroku[web.1]: Idling
+2018-11-12T19:03:27.820938+00:00 heroku[web.1]: State changed from up to down
+2018-11-12T19:03:28.822556+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-11-12T19:03:58.828891+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 30 seconds of SIGTERM
+2018-11-12T19:03:58.828891+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2018-11-12T19:03:58.942229+00:00 heroku[web.1]: Process exited with status 137
