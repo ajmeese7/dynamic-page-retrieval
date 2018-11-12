@@ -32,6 +32,8 @@ app
         })
         .then(() => {
           if (page) {
+            console.log("Attempting to kill page...")
+
             // NOTE: If this doesn't fix the memory leak problem, these resources may help:
             // https://github.com/GoogleChrome/puppeteer/issues/615
             // https://github.com/GoogleChrome/puppeteer/issues/1047
