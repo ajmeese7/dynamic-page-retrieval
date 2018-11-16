@@ -47,7 +47,18 @@ sequence of commands:
 `heroku ps:scale web=1`
 `heroku open`
 
-And you should have a working copy of the project.
+And you should have a working copy of the project!
+
+I am using [kaffeine](http://kaffeine.herokuapp.com/) to keep my dyno alive to reduce loading
+times. It is currently set to sleep at 12:00 AM to conserve hours, so it will not be awake from
+12:00-6:00 unless someone sends a request during that time interval. An alternative is to add
+something like this to the app to help it keep itself awake:
+```javascript
+var http = require("http");
+setInterval(function() {
+  http.get("http://<your app name>.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+```
 
 ## Contributing
 
