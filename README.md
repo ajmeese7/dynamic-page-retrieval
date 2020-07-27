@@ -42,9 +42,13 @@ Clone this project to your machine and open a terminal in the folder. Enter the 
 sequence of commands:
 
 `heroku create`
+
 `heroku buildpacks:add https://github.com/jontewks/puppeteer-heroku-buildpack`
+
 `git push heroku master`
+
 `heroku ps:scale web=1`
+
 `heroku open`
 
 And you should have a working copy of the project!
