@@ -12,7 +12,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "ejs": "^2.5.6",
+    "ejs": "^3.1.7",
     "express": "4.17.3",
     "puppeteer": "1.13.0",
     "xmlhttprequest": "1.8.0"
